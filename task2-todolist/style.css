@@ -1,0 +1,297 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+.container{
+    width: 80%;
+    height: 100%;
+    margin:auto;
+
+    padding:3vh 18vmax;
+    /* padding:2em  0em 1em 7em; */
+    /* border: 2px solid red; */
+}
+
+#main-header{
+
+    width:100%;
+    background-color: #061B25;
+    height: 15vmax;
+    /* border: 2px solid rgb(8, 200, 24); */
+    margin-bottom: 1rem;
+}
+#main-header .container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+#main-header h1{
+    /* border: 2px solid; */
+    color:#fff;
+    /* padding:15px 12px; */
+    font-size: 2.7vmax;
+}
+#todo-form input[type="text"]{
+    color: #fff;
+    background-color: #072937;
+    width:30vmax;
+    height:2.99vmax;
+    padding:0.8vw 1.5vw;
+    margin:2px 1vw 2vw 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+#todo-form button{
+    background-color: #16a9ed;
+    color: #fff;
+    border-radius: 0.89em;
+    padding: 0.5vw;
+    border: none;
+}
+
+#todo-form button:hover{
+    color:#16a9ed;
+    background-color:#fff;
+
+}
+#todo-form button:active{
+    color:#054b6c;
+    background-color:#fff;
+
+}
+/* section{
+    /* padding: 1vw; */
+
+
+section .container{
+    
+    background-color: #E9F2FB;
+}
+
+.stats{
+    margin-top: 0vw;
+    padding: 2px;
+    font-size: 1.2vw;
+    /* background-color: #FF8C46; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1vw;
+}
+
+.stats li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    /* background-color: #061B25; */
+    color: #fff;
+    padding: 6px 12px;
+    /* border-radius: 8px; */
+}
+.stats li span:nth-child(1) {
+  background-color: #061B25;
+  padding: 5px 8px;
+  border-top-left-radius:10px ;
+  border-bottom-left-radius:10px ;
+  /* margin: 0px; */
+}
+
+.stats li span:nth-child(2) {
+  background-color: #0d5979;
+  padding:5px 8px;
+  text-align: center;
+   border-top-right-radius:10px ;
+  border-bottom-right-radius:10px ;
+  margin-left: -5px;
+  /* margin: 0px; */
+}
+
+.todos li{
+/* width:60vw ; */
+
+background-color: #fff;
+    list-style: none;
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    padding: 2px 5px;
+}
+.todos li div{
+display: flex;
+align-items: center;
+gap: 0.75rem;
+    height: 5vmax;
+    padding-left: 5px;
+}
+
+.todos li.complete{
+    background-color:#cdd7dc ;
+    text-decoration: line-through;
+    color:#94B7C4 ;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width:1.3rem;
+    height:1.3rem;
+    border-radius: 50%;
+    border:1.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+input[type="checkbox"]::before{
+    content: url("data:image/svg+xml,%3Csvg fill='%23fff' height='10' width='15' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 490 490' xml:space='preserve' stroke='%23fff'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpolygon points='452.253,28.326 197.831,394.674 29.044,256.875 0,292.469 207.253,461.674 490,54.528 '%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E");
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+    
+}
+
+input[type="checkbox"]:checked{
+    background-color:#94B7C4 ;
+    border-color:#94B7C4 ;
+}
+input[type="checkbox"]:checked::before{
+    
+    transform: scale(1);
+}
+
+.todos button svg{
+    width:1.5em;
+    height:1.5em;
+    border: none;
+    outline: none;
+    /* background-color:#0d5979; */
+}
+
+.todos li button{
+    border:0;
+    padding: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.todos li button svg path{
+transition: all .2s ease-in-out;
+}
+
+.todos li button:hover svg path{
+    stroke:#072937;
+}
+.todos li button:active svg{
+    transform: scale(.8);
+}
+.todos li span{
+    padding: 2px;
+    border-radius: 2px;
+    transition:all 0.2s ease-in-out ;
+    
+}
+
+.todos li span:focus{
+    background-color: rgb(173, 230, 214);
+    outline:none
+}
+
+.todos li span[contenteditable]:hover{
+    background-color: lightblue;
+}
+
+
+@media (max-width: 500px) {
+
+    /* #main-header{
+        width: 100%;
+        height:34vh;
+    }
+  */
+}
+@media (max-width: 700px) {
+
+    #main-header{
+        overflow: hidden;
+        width: 100%;
+        height:40vh;
+    }
+    #main-header .container{
+      overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  #todo-form input[type=text]{
+    /* border: 2px solid; */
+    height:5vh;
+    width:80vw;
+    padding: 3px 6px;
+  }
+  #todo-form button{
+    margin-top: 10px;
+  }
+  section .container{
+    width:99%;
+    /* border:2px solid green; */
+    padding:10px;
+    margin:auto;
+    /* overflow: hidden; */
+  } 
+
+  .stats{
+    font-size: 3.4vw;
+    /* display: none; */
+    /* overflow: hidden; */
+}
+.todos{
+      overflow: hidden;
+    width:100%;
+    /* padding:0px 25px; */
+    /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .todos li{
+   font-size: 4.5vw;
+    width:100%;
+    text-align: center;
+  }
+
+  footer .container {
+    /* border: 2px solid red; */
+    width: 100%;
+    font-size: 4vw;
+    text-align: center;
+    padding:4px 2px;
+
+  }
+}
